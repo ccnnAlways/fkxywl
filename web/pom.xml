@@ -5,7 +5,7 @@
 
 	<groupId>com.fkxywl</groupId>
 	<artifactId>web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${com.fkxywl.web.version}</version>
 	<packaging>jar</packaging>
 
 	<name>web</name>
@@ -22,11 +22,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<com.alibaba.dubbo.version>2.5.3</com.alibaba.dubbo.version>
-		<org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.fkxywl</groupId>
+			<artifactId>facade</artifactId>
+			<version>${com.fkxywl.facade.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -48,19 +52,23 @@
 					<artifactId>spring</artifactId>
 				</exclusion>
 			</exclusions>
-			<version>${com.alibaba.dubbo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
-			<version>${org.apache.zookeeper.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
 		<!--dubbo end-->
-	</dependencies>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>

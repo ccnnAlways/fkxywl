@@ -10,13 +10,10 @@
     <dubbo:application name="${dubbo.application.name}" />
 
     <!-- 注册中心暴露服务地址 -->
-    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
-
-    <!-- <dubbo:registry protocol="zookeeper" address="10.170.219.98:2181,10.173.55.173:2181" /> -->
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
 
-    <!-- 暴露服务 -->
-    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" payload="20971520" />
 
-    <dubbo:service interface="" ref="" retries="0" timeout="6000" />
+    <dubbo:service interface="com.fkxywl.facade.api.HelloService" ref="helloService" retries="3" timeout="6000" />
 </beans>

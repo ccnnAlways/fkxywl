@@ -15,8 +15,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+
+        <com.fkxywl.dubbo.version>0.0.1-SNAPSHOT</com.fkxywl.dubbo.version>
+        <com.fkxywl.facade.version>0.0.1-SNAPSHOT</com.fkxywl.facade.version>
+        <com.fkxywl.web.version>0.0.1-SNAPSHOT</com.fkxywl.web.version>
+
 		<spring.boot.version>2.0.1.RELEASE</spring.boot.version>
 		<spring.data.releasetrain.version>Fowler-SR2</spring.data.releasetrain.version>
+		<com.alibaba.dubbo.version>2.5.3</com.alibaba.dubbo.version>
+		<org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
+		<zkclient.version>0.3</zkclient.version>
 	</properties>
 
 	<dependencyManagement>
@@ -36,14 +44,52 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+			<!--dubbo start-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+				</exclusions>
+				<version>${com.alibaba.dubbo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>${org.apache.zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                </exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+			</dependency>
+			<!--dubbo end-->
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.15</version>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-logging</artifactId>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -52,6 +98,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
