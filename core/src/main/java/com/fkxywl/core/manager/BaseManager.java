@@ -1,13 +1,13 @@
-package com.fkxywl.common.core.manager;
+package com.fkxywl.core.manager;
 
 
-import com.fkxywl.common.api.constant.ErrorCodes;
-import com.fkxywl.common.core.handler.QueryParamsAdapter;
 import com.fkxywl.common.api.bean.BaseEntity;
 import com.fkxywl.common.api.bean.ModelQueryParams;
 import com.fkxywl.common.api.bean.PageData;
+import com.fkxywl.common.api.constant.ErrorCodes;
 import com.fkxywl.common.api.exception.ValidateException;
-import com.fkxywl.common.core.repository.BaseRepository;
+import com.fkxywl.core.handler.QueryParamsAdapter;
+import com.fkxywl.core.repository.BaseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;

@@ -19,6 +19,8 @@
         <com.fkxywl.dubbo.version>0.0.1-SNAPSHOT</com.fkxywl.dubbo.version>
         <com.fkxywl.facade.version>0.0.1-SNAPSHOT</com.fkxywl.facade.version>
         <com.fkxywl.web.version>0.0.1-SNAPSHOT</com.fkxywl.web.version>
+        <com.fkxywl.core.version>0.0.1-SNAPSHOT</com.fkxywl.core.version>
+        <com.fkxywl.common.version>0.0.1-SNAPSHOT</com.fkxywl.common.version>
 
 	</properties>
 
@@ -155,10 +157,11 @@
 		</plugins>
 	</build>
 
-	<modules>
-		<module>../facade</module>
-		<module>../dubbo</module>
-		<module>../web</module>
-		<module>../common</module>
-	</modules>
+	<!--<modules>-->
+		<!--<module>../facade</module>-->
+		<!--<module>../dubbo</module>-->
+		<!--<module>../web</module>-->
+		<!--<module>../common</module>-->
+		<!--<module>../core</module>-->
+	<!--</modules>-->
 </project>

@@ -1,4 +1,4 @@
-package com.fkxywl.common.core.support;
+package com.fkxywl.common.support;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,7 +1,7 @@
 package com.fkxywl.dubbo.dao.repository;
 
 
-import com.fkxywl.common.core.repository.BaseRepository;
+import com.fkxywl.core.repository.BaseRepository;
 import com.fkxywl.dubbo.entity.User;
 
 /**

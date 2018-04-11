@@ -1,12 +1,12 @@
 package com.fkxywl.facade.api;
 
 
-import com.fkxywl.common.api.bean.Result;
+import com.fkxywl.facade.vo.EntityVo;
 
 /**
  * 接口规范
  */
 public interface UserService {
 
-    Result test();
+    EntityVo test();
 }

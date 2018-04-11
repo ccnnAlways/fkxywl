@@ -1,6 +1,6 @@
 package com.fkxywl.common.mvc.editor;
 
-import com.fkxywl.common.core.support.DateHelper;
+import com.fkxywl.common.support.DateHelper;
 
 import java.beans.PropertyEditorSupport;
 import java.util.Date;
