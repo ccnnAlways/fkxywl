@@ -8,6 +8,6 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @PropertySource("classpath:dubbo/dubbo.properties")
 @ImportResource({ "classpath:dubbo/*.xml" })
-@MapperScan("com.fkxywl.dubbo.mapper")
+@MapperScan("com.fkxywl.dubbo.dao.mapper")
 public class ProjectConfig {
 }

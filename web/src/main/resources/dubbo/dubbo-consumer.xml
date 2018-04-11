@@ -12,5 +12,5 @@
     <!-- 注册中心暴露服务地址 -->
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
 
-    <dubbo:reference interface="com.fkxywl.facade.api.HelloService"  id="helloService" check="false"/>
+    <dubbo:reference interface="com.fkxywl.facade.api.UserService" id="userService" check="false"/>
 </beans>

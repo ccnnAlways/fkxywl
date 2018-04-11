@@ -1,4 +1,4 @@
-package com.fkxywl.dubbo.mapper;
+package com.fkxywl.dubbo.dao.mapper;
 
 import com.fkxywl.dubbo.entity.User;
 

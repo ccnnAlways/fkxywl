@@ -155,9 +155,10 @@
 		</plugins>
 	</build>
 
-	<!--<modules>-->
-		<!--<module>../facade</module>-->
-		<!--<module>../dubbo</module>-->
-		<!--<module>../web</module>-->
-	<!--</modules>-->
+	<modules>
+		<module>../facade</module>
+		<module>../dubbo</module>
+		<module>../web</module>
+		<module>../common</module>
+	</modules>
 </project>
