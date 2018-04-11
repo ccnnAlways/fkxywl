@@ -11,6 +11,7 @@ public class DubboApplication {
 	private static Logger logger =LoggerFactory.getLogger(DubboApplication.class);
 
 	public static void main(String[] args) {
+		System.setProperty("dubbo.application.logger","slf4j");
 		SpringApplication.run(DubboApplication.class, args);
 		logger.info("dubbo服务启动成功");
 		synchronized (DubboApplication.class) {
